@@ -16,7 +16,6 @@ Player::~Player()
     delete vlayout;
 }
 
-
 void Player::setPlayer()
 {
     hlayout->addWidget(prev);

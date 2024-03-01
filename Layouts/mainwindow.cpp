@@ -27,14 +27,12 @@ MainWindow::~MainWindow()
     delete pageStack;
 }
 
-
 void MainWindow::setStack()
 {
     pageStack->addWidget(homePage->getWidget());
     pageStack->addWidget(playlistPage->getWidget());
     pageStack->addWidget(settingsPage->getWidget());
 }
-
 
 void MainWindow::setMainLayout()
 {
