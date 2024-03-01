@@ -35,6 +35,8 @@ QWidget* PlaylistPage::getWidget() const
 
 void PlaylistPage::setPlaylist()
 {
+    layout->setAlignment(Qt::AlignTop);
+    layout->setSpacing(20);
     layout->addWidget(pageName);
 
 

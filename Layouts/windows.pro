@@ -13,6 +13,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     navbar.cpp \
+    player.cpp \
     playlistpage.cpp \
     settingspage.cpp
 
@@ -20,6 +21,7 @@ HEADERS += \
     homePage.hpp \
     mainwindow.hpp \
     navbar.hpp \
+    player.hpp \
     playlistpage.hpp \
     settingspage.hpp
 

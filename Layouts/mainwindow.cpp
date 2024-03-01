@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , playlistPage{new PlaylistPage{this}}
     , homePage{new HomePage{this}}
     , settingsPage{new SettingsPage{this}}
+    , player{new Player{this}}
     , pageStack{new QStackedLayout{}}
 
 {
@@ -20,6 +21,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(navbar, &Navbar::pageSwapSignal, this, &MainWindow::changePage);
 }
 
+MainWindow::~MainWindow()
+{
+    delete ui;
+    delete pageStack;
+}
+
+
 void MainWindow::setStack()
 {
     pageStack->addWidget(homePage->getWidget());
@@ -30,8 +38,10 @@ void MainWindow::setStack()
 
 void MainWindow::setMainLayout()
 {
+
     mainLayout->addLayout(navbar->getLayout(), 0, 0, 0, 0, Qt::AlignTop | Qt::AlignLeft);
-    mainLayout->addLayout(pageStack, 0, 2, 0, 3, Qt::AlignTop | Qt::AlignLeft);
+    mainLayout->addLayout(pageStack, 0, 1, 0, 1, Qt::AlignTop | Qt::AlignLeft);
+    mainLayout->addLayout(player->getLayout(),  3, 0,  2, 1, Qt::AlignBottom | Qt::AlignRight);
 }
 
 void MainWindow::changePage(int i)
@@ -39,7 +49,3 @@ void MainWindow::changePage(int i)
     pageStack->setCurrentIndex(i);
 }
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-}

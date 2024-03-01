@@ -10,6 +10,8 @@
 #include "homePage.hpp"
 #include "settingspage.hpp"
 
+#include "player.hpp"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -35,6 +37,8 @@ private:
     PlaylistPage* playlistPage;
     HomePage* homePage;
     SettingsPage* settingsPage;
+
+    Player* player;
 
     QGridLayout* mainLayout;
     QStackedLayout* pageStack;
