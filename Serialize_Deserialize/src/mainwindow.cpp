@@ -37,7 +37,7 @@ void MainWindow::write_to_file()
 
     QString data = last_person->serialize();
 
-    QFile file{"/Users/armanmikoyan/qt_lessons/Serialize_Deserialize/db.txt"};
+    QFile file{"/Users/armanmikoyan/Desktop/QT/Serialize_Deserialize/db.txt"};
 
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -53,7 +53,7 @@ void MainWindow::write_to_file()
 
 void MainWindow::render_ui()
 {
-    QFile file("/Users/armanmikoyan/qt_lessons/Serialize_Deserialize/db.txt");
+    QFile file("/Users/armanmikoyan/Desktop/QT/Serialize_Deserialize/db.txt");
     if (last_person == nullptr) return;
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
