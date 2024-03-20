@@ -14,8 +14,8 @@ SOURCES += \
     components/musicPlayer/musicplayer.cpp \
     components/navbar/navbar.cpp \
     components/search/searchbar.cpp \
-    main.cpp \
-    main_window.cpp
+    src/main.cpp \
+    src/main_window.cpp
 
 HEADERS += \
     components/body/body.hpp \
@@ -23,10 +23,9 @@ HEADERS += \
     components/musicPlayer/musicplayer.hpp \
     components/navbar/navbar.hpp \
     components/search/searchbar.hpp \
-    main_window.hpp
+    src/main_window.hpp
 
-FORMS += \
-    main_window.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
