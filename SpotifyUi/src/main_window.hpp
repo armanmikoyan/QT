@@ -17,10 +17,6 @@ class main_window : public QMainWindow
 public:
     main_window(QWidget *parent = nullptr);
     ~main_window();
-
-private:
-    Ui::main_window *ui;
-
 private:
     QGridLayout* mainLayout;
     QWidget* mainWidget;
