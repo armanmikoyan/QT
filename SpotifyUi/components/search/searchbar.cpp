@@ -7,8 +7,15 @@ SearchBar::SearchBar(QWidget *parent)
     , mainWidget{new QWidget{this}}
 {
     mainWidget->setLayout(mainLayout);
-    mainLayout->addWidget(searchBar);
 
+    QFont font("Arial", 35); // Example font size 25
+    QLabel* spotify = new QLabel{"New Spotify"};
+    spotify->setFont(font);
+    spotify->setAlignment(Qt::AlignCenter);
+    mainLayout->addWidget(spotify);
+
+
+    mainLayout->addWidget(searchBar);
     searchBar->setObjectName("searchBar");
     searchBar->setMinimumWidth(750);
     searchBar->setText("Search...");
