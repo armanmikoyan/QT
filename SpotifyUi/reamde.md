@@ -1,0 +1,1 @@
+<img src="../../../Pictures/uiSpotify.png" alt="Screenshot of My Application" width="600">
